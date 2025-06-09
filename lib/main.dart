@@ -4,7 +4,6 @@ import 'dart:async';
 import 'package:live_kirtan/utils/constants.dart';
 import 'package:live_kirtan/widgets/nuephormic_button.dart';
 import 'package:live_kirtan/widgets/nuephormic_container.dart';
-import 'package:live_kirtan/screens/youtube_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -186,25 +185,6 @@ class _AudioPlayerPageState extends State<AudioPlayerPage> {
                                   size: 40,
                                   color: Colors.black87,
                                 ),
-                          backgroundColor: bgColor,
-                        ),
-                        const SizedBox(width: 20),
-                        NeumorphicButton(
-                          onTap: () async {
-                            await _audioPlayer.stop();
-      setState(() {
-        _isPlaying = false;
-      });
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(builder: (context) => const YouTubeScreen()),
-                            );
-                          },
-                          child: Icon(
-                            Icons.live_tv_rounded,
-                            size: 40,
-                            color: Colors.black87,
-                          ),
                           backgroundColor: bgColor,
                         ),
                       ],
